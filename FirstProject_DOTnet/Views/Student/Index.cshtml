@@ -1,0 +1,22 @@
+﻿@using FirstProject_DOTnet.Models
+@model List<Student>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Student Page</h1>
+    <ul>
+    @foreach(Student _students in Model){
+        <li>@_students.Id - @_students.Name - @_students.Point</li>
+    }
+    </ul>
+</body>
+</html>
